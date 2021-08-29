@@ -1,6 +1,6 @@
 import Grid from '@material-ui/core/Grid';
-import styled from 'styled-components/macro';
+import { styled } from '@material-ui/core/styles';
 
-export const CreditCardList = styled(Grid)`
-  margin-bottom: 16px;
-`;
+export const CreditCardList = styled(Grid)({
+  marginBottom: '24px',
+});

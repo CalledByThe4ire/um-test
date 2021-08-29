@@ -1,15 +1,15 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import { App as StyledApp } from './App.styles.jsx';
+import { App as AppStyled } from './App.styles.jsx';
 import CreditCards from '../CreditCards/CreditCards.jsx';
 
-function App() {
+const App = () => {
   return (
-    <StyledApp className="app">
+    <AppStyled className="app">
       <Container className="app__container" disableGutters={false}>
         <CreditCards />
       </Container>
-    </StyledApp>
+    </AppStyled>
   );
-}
+};
 export default App;

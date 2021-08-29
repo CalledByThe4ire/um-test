@@ -4,11 +4,11 @@ import Grid from '@material-ui/core/Grid';
 import { v4 as uuidv4 } from 'uuid';
 import _ from 'lodash';
 import CreditCard from '../CreditCard/CreditCard.jsx';
-import { CreditCardList as StyledCreditCardList } from './CreditCardList.styles.jsx';
+import { CreditCardList as CreditCardListStyled } from './CreditCardList.styles.jsx';
 import { random, mapRange, format } from '../../utils/helpers/number.helpers';
 
 const CreditCardList = ({ items }) => (
-  <StyledCreditCardList className="credit-card-list" container spacing={2}>
+  <CreditCardListStyled className="credit-card-list" container spacing={2}>
     {Array.from({ length: items }).map((item) => (
       <Grid item lg={4} key={uuidv4()}>
         <CreditCard
@@ -21,7 +21,7 @@ const CreditCardList = ({ items }) => (
         />
       </Grid>
     ))}
-  </StyledCreditCardList>
+  </CreditCardListStyled>
 );
 
 CreditCardList.propTypes = {
