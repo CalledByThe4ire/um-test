@@ -5,7 +5,6 @@ import CreditCardWoff2 from './CreditCard.woff2';
 
 export const GlobalFontsTheme = createTheme({
   typography: {
-    fontFamily: 'CreditCard, Arial',
   },
   components: {
     MuiCssBaseline: {

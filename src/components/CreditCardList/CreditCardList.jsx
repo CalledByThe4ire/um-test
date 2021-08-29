@@ -1,31 +1,42 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import { v4 as uuidv4 } from 'uuid';
-import _ from 'lodash';
+
 import CreditCard from '../CreditCard/CreditCard.jsx';
 import { CreditCardList as CreditCardListStyled } from './CreditCardList.styles.jsx';
-import { random, mapRange, format } from '../../utils/helpers/number.helpers';
+import { cardsSelector } from '../../store/cards/cards.slice';
+import { mapRange, format } from '../../utils/helpers/number.helpers';
 
-const CreditCardList = ({ items }) => (
-  <CreditCardListStyled className="credit-card-list" container spacing={2}>
-    {Array.from({ length: items }).map((item) => (
-      <Grid item lg={4} key={uuidv4()}>
-        <CreditCard
-          sequence={mapRange(
-            format(random(_.padStart('1', 16, '0'), _.padEnd('9', 16, '9'))),
-            '•',
-            6,
-            4
-          )}
-        />
-      </Grid>
-    ))}
-  </CreditCardListStyled>
-);
+const CreditCardList = () => {
+  const { items } = useSelector(cardsSelector);
 
-CreditCardList.propTypes = {
-  items: PropTypes.number,
+  const renderCreditCardList = () => {
+    if (items.length !== 0) {
+      return (
+        <CreditCardListStyled
+          className="credit-card-list"
+          container
+          spacing={2}
+        >
+          {items.map((card) => (
+            <Grid item lg={4} key={uuidv4()}>
+              <CreditCard sequence={mapRange(format(card), '•', 6, 4)} />
+            </Grid>
+          ))}
+        </CreditCardListStyled>
+      );
+    }
+
+    return (
+      <Typography variant="overline" component="p">
+        Пока вы&nbsp;не&nbsp;привязали ни&nbsp;одной карты.
+      </Typography>
+    );
+  };
+
+  return renderCreditCardList();
 };
 
 export default CreditCardList;

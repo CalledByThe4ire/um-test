@@ -5,6 +5,10 @@ export const CreditCards = styled('section')({
   marginBottom: '32px',
 
   h3: {
+    marginBottom: '16px',
+  },
+
+  p: {
     marginBottom: '24px',
   },
 });
