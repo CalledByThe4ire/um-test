@@ -1,9 +1,9 @@
 import { createTheme } from '@material-ui/core/styles';
 
-import CreditCardWoff from './CreditCard.woff';
-import CreditCardWoff2 from './CreditCard.woff2';
+import CreditCardWoff from '../assets/fonts/CreditCard.woff';
+import CreditCardWoff2 from '../assets/fonts/CreditCard.woff2';
 
-export const GlobalFontsTheme = createTheme({
+export const TypographyTheme = createTheme({
   typography: {
   },
   components: {

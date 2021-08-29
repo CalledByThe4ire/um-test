@@ -16,6 +16,6 @@ const modalSlice = createSlice({
 
 export const { toggleModal } = modalSlice.actions;
 
-export const cardsSelector = (state) => state.modal;
+export const modalSelector = (state) => state.modal;
 
 export default modalSlice.reducer;

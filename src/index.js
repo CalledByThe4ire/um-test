@@ -4,14 +4,14 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import { GlobalFontsTheme } from './assets/fonts';
+import { TypographyTheme } from './themes/typography.theme';
 import store from './store';
 import App from './components/App/App.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={GlobalFontsTheme}>
+      <ThemeProvider theme={TypographyTheme}>
         <CssBaseline />
         <App />
       </ThemeProvider>

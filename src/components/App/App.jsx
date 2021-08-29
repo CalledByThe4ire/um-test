@@ -6,7 +6,7 @@ import CreditCards from '../CreditCards/CreditCards.jsx';
 const App = () => {
   return (
     <AppStyled className="app">
-      <Container className="app__container" disableGutters={false}>
+      <Container className="app__container">
         <CreditCards />
       </Container>
     </AppStyled>
