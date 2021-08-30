@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
-export const random = (min, max) =>
-  _.random(parseInt(min, 10), parseInt(max, 10));
+export const genRandom = (len) =>
+  _.random(parseInt(_.padEnd(1, 16, '0')), parseInt(_.padEnd(9, 16, '9')));
 
 export const mapRange = (
   value,
