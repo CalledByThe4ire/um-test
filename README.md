@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Move to folder, type `npm i`, `npm start`, open `http://localhost:3000/`
 
-### [Live Demo](http://localhost:3000/)
+### [Live Demo](https://modest-murdock-94ab3b.netlify.app/)
